@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="Jose's Compadre Mexican Grill & Cantina in North Little Rock, AR. Fajitas, enchiladas, chimichangas and more. Open 11 am – 9 pm daily. Dine in, carry out, or order online.">
+<meta property="og:title" content="Jose's Compadre Mexican Grill">
+<meta property="og:description" content="Mexican grill & cantina on Hwy 165 in North Little Rock. Open 11 am – 9 pm daily.">
+<meta name="theme-color" content="#b8471f">
+<link rel="icon" href="{{LOGO}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Jose's Compadre Mexican Grill","servesCuisine":"Mexican","telephone":"{{TEL}}",
+ "address":{"@type":"PostalAddress","streetAddress":"{{ADDR1}}","addressLocality":"North Little Rock","addressRegion":"AR","postalCode":"72117","addressCountry":"US"},
+ "openingHours":"Mo-Su 11:00-21:00","sameAs":["{{FACEBOOK}}"],"hasMenu":"#menu"}
+</script>
+<style>
+:root{
+  --sand:#f6e7cb; --sand-2:#efd9b0; --paper:#fbf3e3; --ink:#3a2417; --ink-2:#6b4a33;
+  --terra:#b8471f; --terra-d:#8f3414; --chile:#c0302f; --cactus:#3f7a3c; --cactus-d:#2c5a2b;
+  --gold:#e7b53c; --sky-1:#f7b267; --sky-2:#f4845f; --sky-3:#f27059; --mesa:#a4492a; --mesa-2:#7c3320;
+  --serape: repeating-linear-gradient(90deg,
+     #c0302f 0 14px,#e7b53c 14px 20px,#3f7a3c 20px 32px,#fbf3e3 32px 35px,#2b8a8a 35px 47px,#3a2417 47px 50px,#f4845f 50px 64px,#fbf3e3 64px 67px);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:17px;line-height:1.5;
+  background-image:radial-gradient(rgba(124,51,32,.06) 1px,transparent 1.4px);background-size:14px 14px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{margin:0;line-height:1.15}
+h2{font-family:"Rye",serif;font-weight:400;font-size:clamp(1.9rem,5vw,2.8rem);color:var(--terra-d);text-align:center}
+.eyebrow{display:block;text-align:center;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--cactus-d);margin-bottom:6px}
+.serape{height:14px;background:var(--serape);box-shadow:inset 0 -2px 0 rgba(0,0,0,.12)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;
+  font-size:1rem;border:2px solid transparent;transition:transform .15s ease,background .15s ease;min-height:48px}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--chile);color:#fff;box-shadow:0 4px 0 #7f1c1b}
+.btn-primary:hover{background:#d23a38}
+.btn-light{background:var(--paper);color:var(--ink);border-color:var(--ink)}
+.btn-green{background:var(--cactus);color:#fff;box-shadow:0 4px 0 var(--cactus-d)}
+
+/* header */
+.topbar{position:sticky;top:0;z-index:30;background:var(--terra-d);color:#fff}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.brand{font-family:"Rye",serif;font-size:1.15rem;text-decoration:none;white-space:nowrap}
+.topnav{display:flex;gap:4px;align-items:center}
+.topnav a{text-decoration:none;font-weight:700;padding:8px 12px;border-radius:999px;font-size:.95rem}
+.topnav a:hover{background:rgba(255,255,255,.14)}
+.topnav .order{background:var(--gold);color:var(--ink)}
+.topnav .order:hover{background:#f3c552}
+.topnav a{white-space:nowrap}
+@media (max-width:880px){.topnav a[href$="#photos"],.topnav a[href$="#catering"]{display:none}}
+@media (max-width:640px){.topnav a:not(.order){display:none}.brand{font-size:1rem}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fcd78a 0%,var(--sky-1) 30%,var(--sky-2) 62%,var(--sky-3) 100%);padding:40px 0 0}
+.sun{position:absolute;left:50%;top:44%;width:min(520px,110vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,#fff1c4 0%,#ffd976 45%,rgba(255,217,118,0) 70%);opacity:.9}
+.hero-inner{position:relative;z-index:2;text-align:center;padding-bottom:170px}
+.badge{display:inline-block;background:var(--paper);border-radius:28px;padding:22px 26px 18px;box-shadow:0 10px 0 rgba(124,51,32,.35),0 18px 40px rgba(60,20,10,.25);
+  border:3px solid var(--ink);max-width:min(460px,92vw)}
+.badge img{width:100%;height:auto}
+.tagline{font-family:"Rye",serif;color:var(--ink);font-size:clamp(1.15rem,3.6vw,1.6rem);margin:26px auto 6px;max-width:26ch;text-shadow:0 1px 0 rgba(255,255,255,.4)}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(58,36,23,.85);color:#fff;border-radius:999px;padding:6px 14px;font-weight:700;font-size:.92rem;margin:8px 0 22px}
+.status i{width:10px;height:10px;border-radius:50%;background:#9ad17b;box-shadow:0 0 0 3px rgba(154,209,123,.3)}
+.status.closed i{background:#f08a7a;box-shadow:0 0 0 3px rgba(240,138,122,.3)}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.landscape{position:absolute;left:0;right:0;bottom:0;height:200px;z-index:1;pointer-events:none}
+.landscape svg{width:100%;height:100%;display:block}
+
+/* about */
+.about{background:var(--paper);padding:56px 0}
+.about-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:30px}
+.feature{text-align:center;padding:10px}
+.feature svg{width:64px;height:64px;margin:0 auto 10px}
+.feature h3{font-size:1.15rem;margin-bottom:4px}
+.feature p{margin:0;color:var(--ink-2)}
+.welcome{max-width:62ch;margin:16px auto 0;text-align:center;font-size:1.08rem;color:var(--ink-2)}
+
+/* menu */
+.menu{padding:60px 0 40px}
+.chips-wrap{position:sticky;top:58px;z-index:20;background:var(--sand);padding:12px 0;margin:22px 0 8px;border-bottom:2px dashed rgba(124,51,32,.25)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 16px;max-width:1080px;margin:0 auto}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;text-decoration:none;font-weight:700;font-size:.92rem;padding:8px 14px;border-radius:999px;background:var(--paper);border:2px solid var(--ink);white-space:nowrap}
+.chip:hover,.chip.active{background:var(--ink);color:var(--paper)}
+.menu-cols{columns:2 460px;column-gap:28px}
+.menu-sec{break-inside:avoid;background:var(--paper);border-radius:var(--radius);padding:22px 22px 12px;margin:0 0 24px;border:2px solid rgba(58,36,23,.12);
+  box-shadow:0 6px 0 rgba(124,51,32,.12);display:inline-block;width:100%}
+.menu-sec h3{font-family:"Rye",serif;font-weight:400;font-size:1.5rem;color:var(--terra-d);padding-bottom:8px;margin-bottom:6px;position:relative}
+.menu-sec h3::after{content:"";position:absolute;left:0;bottom:0;width:72px;height:6px;border-radius:3px;background:var(--serape)}
+.sec-note{margin:8px 0 4px;font-style:italic;color:var(--ink-2);font-size:.95rem}
+.items{list-style:none;margin:0;padding:0}
+.item{padding:10px 0;border-bottom:1px dashed rgba(58,36,23,.18)}
+.item:last-child{border-bottom:0}
+.item-top{display:flex;align-items:baseline;gap:8px}
+.item-name{font-weight:800}
+.dots{flex:1;border-bottom:2px dotted rgba(58,36,23,.3);transform:translateY(-4px);min-width:12px}
+.item-price{font-weight:800;color:var(--chile);white-space:nowrap}
+.item-top{flex-wrap:wrap}
+.item-price.multi{flex-basis:100%;font-size:.95rem;margin-top:1px}
+.item-desc{margin:3px 0 0;color:var(--ink-2);font-size:.95rem}
+.advisory{font-size:.85rem;color:var(--ink-2);text-align:center;max-width:60ch;margin:8px auto 0}
+.order-band{margin:10px 0 0;text-align:center}
+.lunch-callout{display:flex;align-items:center;gap:16px;text-decoration:none;background:var(--ink);color:var(--paper);border-radius:var(--radius);padding:16px 20px;margin:6px 0 24px;
+  box-shadow:0 6px 0 rgba(124,51,32,.25);transition:transform .15s ease}
+.lunch-callout:hover{transform:translateY(-2px)}
+.lc-icon svg{width:44px;height:44px;display:block}
+.lc-text{flex:1;display:flex;flex-direction:column}
+.lc-text strong{font-family:"Rye",serif;font-weight:400;font-size:1.25rem;color:var(--gold)}
+.lc-text span{font-size:.95rem;opacity:.9}
+.lc-arrow{font-size:1.8rem;font-weight:800;color:var(--gold)}
+/* lunch page */
+.page-head{background:linear-gradient(180deg,#fcd78a,var(--sky-1) 60%,var(--sky-2));padding:40px 0 34px;text-align:center}
+.page-head h1{font-family:"Rye",serif;font-weight:400;font-size:clamp(2.2rem,7vw,3.4rem);color:var(--terra-d)}
+.page-head p{margin:8px auto 0;max-width:46ch;font-weight:700}
+.after3{display:inline-block;margin-top:16px;background:var(--paper);border:3px solid var(--ink);border-radius:14px;padding:10px 16px;font-weight:800}
+.after3 b{color:var(--chile)}
+.back{display:inline-block;margin:26px 0 0;font-weight:800;color:var(--terra-d)}
+.days{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin:6px 0 26px}
+.day{background:var(--paper);border-radius:var(--radius);padding:18px;border:2px solid rgba(58,36,23,.12);box-shadow:0 6px 0 rgba(124,51,32,.12);border-top:8px solid transparent;border-image:var(--serape) 8 0 0 0}
+.day .dname{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;color:var(--cactus-d)}
+.day .dprice{float:right;font-weight:800;color:var(--chile);font-size:1.1rem}
+.day h3{font-size:1.1rem;margin:6px 0 4px}
+.day p{margin:0;color:var(--ink-2);font-size:.95rem}
+.day.today{outline:3px solid var(--chile);outline-offset:2px}
+.day .tag{display:none;background:var(--chile);color:#fff;font-size:.72rem;font-weight:800;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:2px}
+.day.today .tag{display:inline-block}
+
+/* catering */
+.catering{background:var(--cactus-d);color:#fff;padding:60px 0;position:relative;overflow:hidden}
+.catering h2{color:var(--gold)}
+.catering .eyebrow{color:#cfe8b8}
+.cater-intro{text-align:center;max-width:56ch;margin:12px auto 30px;color:#e6f1dc}
+.cater-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.cater-card{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:22px;border-top:10px solid transparent;border-image:var(--serape) 10 0 0 0}
+.cater-card h3{font-family:"Rye",serif;font-weight:400;font-size:1.3rem;color:var(--terra-d)}
+.cater-price{font-weight:800;font-size:1.5rem;color:var(--chile);margin:4px 0 8px}
+.cater-price span{font-size:.85rem;color:var(--ink-2);font-weight:600}
+.cater-card ul{margin:0;padding-left:20px}
+.cater-card li{margin:3px 0}
+.cater-notes{text-align:center;margin-top:26px;color:#e6f1dc;font-size:.95rem}
+.cater-notes strong{color:#fff}
+
+/* visit */
+.visit{padding:60px 0 70px}
+.visit-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:30px;align-items:stretch}
+.card{background:var(--paper);border-radius:var(--radius);padding:24px;border:2px solid rgba(58,36,23,.12);box-shadow:0 6px 0 rgba(124,51,32,.12)}
+.card h3{font-family:"Rye",serif;font-weight:400;font-size:1.3rem;color:var(--terra-d);margin:0 0 6px}
+.card p{margin:0 0 16px}
+.card .big{font-size:1.25rem;font-weight:800}
+.card .stack{display:flex;flex-direction:column;gap:10px}
+.map{border-radius:var(--radius);overflow:hidden;border:3px solid var(--ink);min-height:320px;background:var(--sand-2)}
+.map{position:relative}
+.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;text-decoration:none;color:var(--ink);padding:20px;
+  background:repeating-linear-gradient(45deg,rgba(124,51,32,.05) 0 12px,transparent 12px 24px),var(--sand-2)}
+.map-fallback svg{width:48px;height:48px;color:var(--chile);margin-bottom:6px}
+.map-fallback strong{font-size:1.15rem}
+.mf-link{margin-top:10px;font-weight:800;background:var(--cactus);color:#fff;padding:8px 16px;border-radius:999px}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* footer */
+footer{background:var(--ink);color:#f3e2c7;padding:36px 0 110px;text-align:center}
+footer .fb{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-decoration:none;background:#1877f2;color:#fff;padding:10px 18px;border-radius:999px;margin:10px 0 16px}
+footer small{display:block;opacity:.75}
+@media (min-width:760px){footer{padding-bottom:36px}}
+
+/* mobile action bar */
+.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr 1.3fr;background:var(--ink);
+  padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px;box-shadow:0 -6px 20px rgba(0,0,0,.25)}
+.actionbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:#fff;font-weight:800;font-size:.82rem;
+  border-radius:12px;padding:8px 4px;min-height:52px;background:rgba(255,255,255,.08)}
+.actionbar a.primary{background:var(--chile)}
+.actionbar svg{width:22px;height:22px}
+@media (min-width:760px){.actionbar{display:none}}
+@media (max-width:640px){.about-grid{grid-template-columns:repeat(3,1fr);gap:8px}.feature{padding:0}.feature p{display:none}.feature svg{width:48px;height:48px}.feature h3{font-size:.95rem}}
+
+/* lunch banner + lunch page */
+.chip-lunch{background:var(--gold)}
+.lunch-banner{display:grid;gap:2px;text-decoration:none;background:var(--terra);color:#fff;border-radius:var(--radius);padding:20px 22px;margin:0 0 24px;
+  border:3px solid var(--ink);box-shadow:0 6px 0 rgba(124,51,32,.3);position:relative;overflow:hidden}
+.lunch-banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:var(--serape)}
+.lb-kicker{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:#ffe3a3}
+.lb-title{font-family:"Rye",serif;font-size:1.5rem}
+.lb-sub{opacity:.92}
+.lb-go{margin-top:8px;font-weight:800;justify-self:start;background:var(--gold);color:var(--ink);padding:8px 16px;border-radius:999px}
+.page-head{background:linear-gradient(180deg,#fcd78a,var(--sky-2));padding:34px 0 40px}
+.page-head .eyebrow{color:var(--ink)}
+.back{display:inline-block;font-weight:800;text-decoration:none;margin-bottom:14px;background:rgba(58,36,23,.85);color:#fff;padding:6px 14px;border-radius:999px}
+.notice{max-width:620px;margin:20px auto 0;background:var(--paper);border:3px solid var(--ink);border-radius:var(--radius);padding:16px 20px;text-align:center;box-shadow:0 6px 0 rgba(124,51,32,.3)}
+.notice p{margin:4px 0}
+.day-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:26px}
+.day-card{position:relative;background:var(--paper);border-radius:var(--radius);padding:18px 18px 16px;border:2px solid rgba(58,36,23,.14);box-shadow:0 6px 0 rgba(124,51,32,.12)}
+.day-card .day-label{margin:0;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;color:var(--cactus-d)}
+.day-card h3{font-family:"Rye",serif;font-weight:400;font-size:1.2rem;color:var(--terra-d);margin:4px 0}
+.day-desc{margin:0;color:var(--ink-2);font-size:.95rem}
+.day-price{margin:8px 0 0;font-weight:800;font-size:1.3rem;color:var(--chile)}
+.today-tag{display:none;position:absolute;top:-11px;right:14px;background:var(--chile);color:#fff;font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:999px}
+.day-card.is-today{border:3px solid var(--chile);background:#fff8e6}
+.day-card.is-today .today-tag{display:block}
+.lunch-menu{padding-top:10px}
+.lunch-menu .menu-cols{columns:auto;display:grid;gap:0 28px;align-items:start}
+@media (min-width:760px){.lunch-menu .menu-cols{grid-template-columns:1fr 1fr}}
+.lunch-menu .menu-sec{display:block}
+.order-band{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+/* photo gallery */
+.gallery{background:var(--sand);padding:56px 0 60px}
+.ph-grid{display:grid;gap:12px;margin-top:24px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.ph-grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+.ph{margin:0;position:relative;border-radius:var(--radius);overflow:hidden;border:3px solid var(--ink);box-shadow:0 6px 0 rgba(124,51,32,.25);aspect-ratio:1/1;background:var(--sand-2)}
+.place{grid-auto-flow:row dense}
+@media (min-width:760px){.place{grid-template-columns:repeat(4,1fr)}}
+.place .ph{aspect-ratio:4/3}
+.place .ph.tall{grid-row:span 2;aspect-ratio:auto}
+.place .ph:first-child figcaption{top:8px;bottom:auto}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.ph:hover img{transform:scale(1.04)}
+.ph figcaption{position:absolute;left:8px;bottom:8px;background:rgba(58,36,23,.85);color:#fff;font-weight:800;font-size:.85rem;padding:4px 10px;border-radius:999px}
+.storefront{margin:0 0 16px;border-radius:12px;overflow:hidden;position:relative;border:2px solid var(--ink)}
+.storefront img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.storefront figcaption{position:absolute;left:8px;bottom:8px;background:rgba(58,36,23,.85);color:#fff;font-weight:800;font-size:.85rem;padding:4px 10px;border-radius:999px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="{{HOME}}#top">Jose's Compadre</a>
+    <nav class="topnav" aria-label="Main">
+      <a href="{{HOME}}#menu">Menu</a>
+      <a href="{{HOME}}#photos">Photos</a>
+      <a href="lunch">Lunch</a>
+      <a href="{{HOME}}#catering">Catering</a>
+      <a href="{{HOME}}#visit">Visit</a>
+      <a class="order" href="{{TOAST}}" target="_blank" rel="noopener">Order Online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!--MAIN-->
+<section class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="badge"><img src="{{LOGO}}" alt="Jose's Compadre Mexican Grill &amp; Cantina" width="640" height="361"></div>
+    <h1 class="tagline">¡Bienvenidos, compadre! Mexican grill &amp; cantina on Hwy 165</h1>
+    <div><span class="status" id="status"><i></i><span id="status-text">Open daily 11 am – 9 pm</span></span></div>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="{{TOAST}}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>Order Online</a>
+      <a class="btn btn-light" href="{{HOME}}#menu">See the Menu</a>
+      <a class="btn btn-light" href="tel:{{TEL}}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.9 2z"/></svg>{{PHONE}}</a>
+    </div>
+  </div>
+  <div class="landscape" aria-hidden="true">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice">
+      <!-- far mesas -->
+      <path fill="#c9603a" opacity=".75" d="M0 120 L120 120 L150 88 L330 88 L360 120 L560 120 L600 70 L760 70 L790 110 L980 110 L1010 80 L1180 80 L1215 118 L1440 118 L1440 200 L0 200Z"/>
+      <!-- near hills -->
+      <path fill="var(--mesa)" d="M0 150 C180 128 320 160 520 146 C720 132 860 162 1060 148 C1240 136 1340 150 1440 144 L1440 200 L0 200Z"/>
+      <path fill="var(--mesa-2)" d="M0 176 C220 162 420 186 700 172 C980 160 1180 184 1440 170 L1440 200 L0 200Z"/>
+      <!-- saguaros -->
+      <g fill="#2c5a2b">
+        <g transform="translate(150 40)">
+          <rect x="18" y="0" width="22" height="140" rx="11"/>
+          <path d="M18 70 H6 a10 10 0 0 1 -10 -10 V30 a8 8 0 0 1 16 0 V54 H18Z"/>
+          <path d="M40 90 H52 a10 10 0 0 0 10 -10 V46 a8 8 0 0 0 -16 0 V74 H40Z"/>
+        </g>
+        <g transform="translate(1240 62) scale(.8)">
+          <rect x="18" y="0" width="22" height="140" rx="11"/>
+          <path d="M18 60 H6 a10 10 0 0 1 -10 -10 V24 a8 8 0 0 1 16 0 V44 H18Z"/>
+          <path d="M40 84 H52 a10 10 0 0 0 10 -10 V36 a8 8 0 0 0 -16 0 V68 H40Z"/>
+        </g>
+        <g transform="translate(1340 100) scale(.5)">
+          <rect x="18" y="0" width="22" height="140" rx="11"/>
+          <path d="M40 70 H52 a10 10 0 0 0 10 -10 V30 a8 8 0 0 0 -16 0 V54 H40Z"/>
+        </g>
+        <g transform="translate(60 118) scale(.45)">
+          <rect x="18" y="0" width="22" height="140" rx="11"/>
+          <path d="M18 64 H6 a10 10 0 0 1 -10 -10 V28 a8 8 0 0 1 16 0 V48 H18Z"/>
+        </g>
+        <g transform="translate(560 96) scale(.55)">
+          <rect x="18" y="0" width="22" height="140" rx="11"/>
+          <path d="M18 64 H6 a10 10 0 0 1 -10 -10 V28 a8 8 0 0 1 16 0 V48 H18Z"/>
+          <path d="M40 84 H52 a10 10 0 0 0 10 -10 V40 a8 8 0 0 0 -16 0 V68 H40Z"/>
+        </g>
+        <g transform="translate(850 70) scale(.75)">
+          <rect x="18" y="0" width="22" height="140" rx="11"/>
+          <path d="M40 76 H52 a10 10 0 0 0 10 -10 V34 a8 8 0 0 0 -16 0 V60 H40Z"/>
+          <path d="M18 92 H6 a10 10 0 0 1 -10 -10 V56 a8 8 0 0 1 16 0 V76 H18Z"/>
+        </g>
+      </g>
+      <!-- prickly pear -->
+      <g fill="#3f7a3c">
+        <ellipse cx="330" cy="172" rx="18" ry="24"/><ellipse cx="354" cy="150" rx="13" ry="18" transform="rotate(25 354 150)"/><ellipse cx="308" cy="152" rx="12" ry="16" transform="rotate(-25 308 152)"/>
+        <ellipse cx="1110" cy="176" rx="16" ry="21"/><ellipse cx="1130" cy="156" rx="11" ry="15" transform="rotate(22 1130 156)"/>
+      </g>
+      <g fill="#e04f5f"><circle cx="360" cy="133" r="4"/><circle cx="304" cy="137" r="4"/><circle cx="1134" cy="141" r="3.5"/></g>
+    </svg>
+  </div>
+</section>
+<div class="serape" aria-hidden="true"></div>
+
+<section class="about">
+  <div class="wrap">
+    <span class="eyebrow">Mexican Grill &amp; Cantina</span>
+    <h2>¡Bienvenidos!</h2>
+    <p class="welcome">We serve a wide variety of Mexican dishes, from sizzling fajitas to house specials and combos. Come dine in, call us for carry-out, or order online for pickup. Our staff is here to help any way we can. We hope to see you soon, and thank you!</p>
+    <div class="about-grid">
+      <div class="feature">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="44" rx="30" ry="9" fill="#e7b53c" stroke="#3a2417" stroke-width="2.5"/><path d="M20 42 C20 22 24 12 32 12 C40 12 44 22 44 42Z" fill="#e7b53c" stroke="#3a2417" stroke-width="2.5"/><path d="M20.5 36 H43.5" stroke="#c0302f" stroke-width="5"/><path d="M20.5 36 H43.5" stroke="#3f7a3c" stroke-width="1.6" stroke-dasharray="3 3"/></svg>
+        <h3>Dine in</h3><p>Pull up a chair, grab some chips &amp; salsa.</p></div>
+      <div class="feature">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 26 L32 14 L56 26 L52 52 H12Z" fill="#c0302f" stroke="#3a2417" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 32 H52 M11 38 H53 M10.5 44 H53.5" stroke-width="3.5" stroke="#e7b53c"/><path d="M11 35 H53 M10.5 41 H53.5" stroke-width="2" stroke="#3f7a3c"/><path d="M26 20 L32 14 L38 20" fill="none" stroke="#3a2417" stroke-width="2.5"/></svg>
+        <h3>Carry-out</h3><p>Call ahead and we'll have it ready.</p></div>
+      <div class="feature">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="26" y="8" width="12" height="50" rx="6" fill="#3f7a3c" stroke="#3a2417" stroke-width="2.5"/><path d="M26 34 H18 a6 6 0 0 1 -6 -6 V18 a4 4 0 0 1 8 0 V26 H26" fill="#3f7a3c" stroke="#3a2417" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 40 H46 a6 6 0 0 0 6 -6 V22 a4 4 0 0 0 -8 0 V32 H38" fill="#3f7a3c" stroke="#3a2417" stroke-width="2.5" stroke-linejoin="round"/><circle cx="32" cy="8" r="4" fill="#e04f5f"/></svg>
+        <h3>Order online</h3><p>Order ahead through Toast for pickup.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="serape" aria-hidden="true"></div>
+<section class="gallery" id="photos">
+  <div class="wrap">
+    <span class="eyebrow">Fresh from the kitchen</span>
+    <h2>¡Buen Provecho!</h2>
+    <div class="ph-grid food">{{GALLERY_FOOD}}</div>
+    <span class="eyebrow" style="margin-top:40px">Come on in</span>
+    <h2>Our Place</h2>
+    <div class="ph-grid place">{{GALLERY_PLACE}}</div>
+  </div>
+</section>
+<div class="serape" aria-hidden="true"></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <span class="eyebrow">Hecho con cariño</span>
+    <h2>Our Menu</h2>
+  </div>
+  <div class="chips-wrap"><nav class="chips" aria-label="Menu sections">{{CHIPS}}<a class="chip chip-lunch" href="lunch">Lunch &rarr;</a></nav></div>
+  <div class="wrap">
+    <a class="lunch-callout" href="lunch">
+      <span class="lc-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="10" fill="#e7b53c"/><g stroke="#e7b53c" stroke-width="4" stroke-linecap="round"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></g></svg></span>
+      <span class="lc-text"><strong>Lunch Menu · 11 am – 3 pm</strong><span>Daily specials, lunch plates &amp; lunch fajitas from $8.99</span></span>
+      <span class="lc-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="menu-cols">{{MENU}}</div>
+    <div class="order-band"><a class="btn btn-primary" href="{{TOAST}}" target="_blank" rel="noopener">Order Online for Pickup</a></div>
+    <p class="advisory">Prices subject to change. Consuming raw or undercooked meat, poultry, eggs or seafood may increase your risk of foodborne illness.</p>
+  </div>
+</section>
+
+<div class="serape" aria-hidden="true"></div>
+<section class="catering" id="catering">
+  <div class="wrap">
+    <span class="eyebrow">Feeding a crowd?</span>
+    <h2>Catering</h2>
+    <p class="cater-intro">For orders of more than 10 people. Every option comes with chips, salsa &amp; tea. Call us to set up your order.</p>
+    <div class="cater-grid">{{CATERING}}</div>
+    <p class="cater-notes"><strong>Call {{PHONE}}</strong> to order catering · Prices per person, subject to change · Tax &amp; tip not included</p>
+  </div>
+</section>
+<div class="serape" aria-hidden="true"></div>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <span class="eyebrow">Come see us</span>
+    <h2>Visit Us</h2>
+    <div class="visit-grid">
+      <div class="card">
+        <figure class="storefront"><img src="photo-exterior.webp" alt="Jose's Compadre storefront on Highway 165" loading="lazy" decoding="async"><figcaption>Look for our sign on Hwy 165</figcaption></figure>
+        <h3>Location</h3>
+        <p class="big">{{ADDR1}}<br>{{ADDR2}}</p>
+        <h3>Hours</h3>
+        <p class="big">Every day<br>11 am – 9 pm</p>
+        <div class="stack">
+          <a class="btn btn-green" href="{{DIRECTIONS}}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get Directions</a>
+          <a class="btn btn-light" href="tel:{{TEL}}">Call {{PHONE}}</a>
+        </div>
+      </div>
+      <div class="map"><a class="map-fallback" href="{{DIRECTIONS}}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <strong>{{ADDR1}}</strong><span>{{ADDR2}}</span><span class="mf-link">Open in Google Maps &rarr;</span></a><iframe title="Map to Jose's Compadre Mexican Grill" src="{{MAPEMBED}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+<!--/MAIN-->
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="font-family:Rye,serif;font-size:1.4rem">Jose's Compadre Mexican Grill</div>
+    <div>{{ADDR1}}, {{ADDR2}} · <a href="tel:{{TEL}}">{{PHONE}}</a></div>
+    <a class="fb" href="{{FACEBOOK}}" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5v3.4h2.8V22H14V11.9h2.8l.4-3.4H14z"/></svg>Follow us on Facebook</a>
+    <small>© <span id="yr">2026</span> Jose's Compadre Mexican Grill &amp; Cantina</small>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:{{TEL}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.9 2z"/></svg>Call</a>
+  <a href="{{DIRECTIONS}}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+  <a class="primary" href="{{TOAST}}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>Order Online</a>
+</nav>
+
+<script>
+(function(){
+  // Tidy the address bar: /index.html -> /, /lunch.html -> /lunch
+  try{
+    var p=location.pathname, np=p.replace(/index\.html$/,'').replace(/\.html$/,'');
+    if(np!==p&&history.replaceState)history.replaceState(null,'',np+location.search+location.hash);
+  }catch(e){}
+  // Open / closed badge, using restaurant time (Central)
+  try{
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var h=+p.find(function(x){return x.type==='hour'}).value%24, m=+p.find(function(x){return x.type==='minute'}).value;
+    var t=h*60+m, open=11*60, close=21*60, el=document.getElementById('status'), tx=document.getElementById('status-text');
+    if(!el){}
+    else if(t>=open&&t<close){tx.textContent='Open now · until 9 pm';}
+    else{el.classList.add('closed');tx.textContent=t<open?'Opens today at 11 am':'Closed now · opens 11 am';}
+    document.getElementById('yr').textContent=new Date().getFullYear();
+  }catch(e){}
+  // Lunch page: highlight today's special
+  try{
+    var wd=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long'}).format(new Date());
+    var d=document.querySelector('.day[data-day="'+wd+'"]'); if(d)d.classList.add('today');
+  }catch(e){}
+  // Highlight today's lunch special (lunch page)
+  try{
+    var wd=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'long'}).format(new Date());
+    document.querySelectorAll('.day-card').forEach(function(c){if(c.dataset.day===wd)c.classList.add('is-today');});
+  }catch(e){}
+  // Highlight the menu chip for the section in view
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){
+      chips.forEach(function(c){var on=c.getAttribute('href')==='#'+en.target.id;c.classList.toggle('active',on);if(on&&c.scrollIntoView)c.parentNode.scrollTo({left:c.offsetLeft-40,behavior:'smooth'});});}});},
+      {rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('.menu-sec').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
